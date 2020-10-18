@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Scraper</title>
+</head>
+<body>
+    <h1>Welcome to stanleys box financial scraper</h1>
+    <h4>Go to /scrape to enter the website</h4>
+    <br>
+    <hr>
+    {% if status %}
+        <h2>Status of the domain entered = {{ status }} </h2>
+    {% endif %}
+    <hr>
+    <br><br>
+    <hr>
+    <p>All websites in our database</p>
+    <ul>
+    {% for domain in all_domains %}
+        <li>{{domain}}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
